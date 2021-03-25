@@ -33,70 +33,86 @@ const Dashboard = () => {
           </View>
 
           <View style={styles.card}>
-            <View style={styles.btncontainers}>
-              <View style={styles.sidelabel}></View>
-              <View style={styles.buttonoption}>
-                <TouchableOpacity>
-                  <Icon name="checkmark-circle-outline" size={50} style={styles.icons}>
+            <View style={[styles.gridbox, {flex: 3}]}>
+              <View>
+                
+              </View>
+            </View>
+
+            <View style={[styles.gridboxbtn]}>
+              <View style={styles.btncontainers}>
+                <View style={styles.buttonoption}>
+                  <TouchableOpacity>
+                    <Icon
+                      name="checkmark-circle-outline"
+                      size={50}
+                      style={styles.icons}></Icon>
+
                     <Text
                       onPress={() => Alert.alert('Button Pressed')}
                       style={styles.optionstext}
                       textBreakStrategy={'simple'}>
-                      Hunt Task
+                      Hunt{'\n'}Task
                     </Text>
-                  </Icon>
-                </TouchableOpacity>
+                  </TouchableOpacity>
+                </View>
+              </View>
+
+              <View style={styles.btncontainers}>
+                <View style={styles.buttonoption}>
+                  <TouchableOpacity>
+                    <Icon
+                      name="hammer-outline"
+                      size={50}
+                      style={styles.icons}></Icon>
+                    <Text
+                      onPress={() => Alert.alert('Button Pressed')}
+                      style={styles.optionstext}
+                      textBreakStrategy={'simple'}
+                    >
+                        
+                      Post{'\n'}Task
+                    </Text>
+                  </TouchableOpacity>
+                </View>
               </View>
             </View>
 
-            <View style={styles.btncontainers}>
-              <View
-                style={[styles.sidelabel, {backgroundColor: '#fed330'}]}></View>
-              <View style={styles.buttonoption}>
-                <TouchableOpacity>
-                  <Icon
-                    name="hammer-outline"
-                    size={50}
-                    style={styles.icons}>
+            <View style={styles.gridboxbtn}>
+              <View style={styles.btncontainers}>
+                <View style={styles.buttonoption}>
+                  <TouchableOpacity>
+                    <Icon
+                      name="time-outline"
+                      size={50}
+                      style={styles.icons}></Icon>
                     <Text
                       onPress={() => Alert.alert('Button Pressed')}
-                      style={styles.optionstext}>
-                      Post Task
-                    </Text>
-                  </Icon>
-                </TouchableOpacity>
-              </View>
-            </View>
-
-            <View style={styles.btncontainers}>
-              <View
-                style={[styles.sidelabel, {backgroundColor: '#334DE0'}]}></View>
-              <View style={styles.buttonoption}>
-                <TouchableOpacity>
-                  <Icon name="time-outline" size={50} style={styles.icons}>
-                    <Text
-                      onPress={() => Alert.alert('Button Pressed')}
-                      style={styles.optionstext}>
+                      style={styles.optionstext}
+                      textBreakStrategy={'simple'}
+                    >
                       History
                     </Text>
-                  </Icon>
-                </TouchableOpacity>
+                  </TouchableOpacity>
+                </View>
               </View>
-            </View>
 
-            <View style={styles.btncontainers}>
-              <View
-                style={[styles.sidelabel, {backgroundColor: '#D6A2E8'}]}></View>
-              <View style={styles.buttonoption}>
-                <TouchableOpacity>
-                  <Icon name="chatbubbles-outline" size={50} style={styles.icons}>
+              <View style={styles.btncontainers}>
+                <View style={styles.buttonoption}>
+                  <TouchableOpacity>
+                    <Icon
+                      name="chatbubbles-outline"
+                      size={50}
+                      style={styles.icons}></Icon>
                     <Text
                       onPress={() => Alert.alert('Button Pressed')}
-                      style={styles.optionstext}>
+                      style={styles.optionstext}
+                      textBreakStrategy={'simple'}
+                    >
                       Chat
                     </Text>
-                  </Icon>
-                </TouchableOpacity>
+                  </TouchableOpacity>
+                </View>
               </View>
             </View>
           </View>
@@ -118,22 +134,44 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   card: {
-    flex: 1,
+    display: 'flex',
+    flex: 4,
+    flexDirection: 'column',
     position: 'absolute',
-    backgroundColor: 'transparent',
+    // backgroundColor: 'red',
     height: '80%',
     width: '100%',
-    flexDirection: 'column',
+    marginTop: '25%',
+    // flexDirection: 'column',
     // borderRadius: 25,
     // elevation: 10,
-    marginTop: '30%',
-    marginBottom: '10%',
+    // marginBottom: '20%',
     borderColor: 'transparent',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     alignSelf: 'center',
     zIndex: 2,
   },
+  gridbox: {
+    flex: 2,
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    paddingTop: '10%',
+    paddingBottom: '10%',
+    width: '100%',
+    justifyContent: 'space-around',
+    // padding: '10%',
+    // marginTop: '15%',
+    // backgroundColor: 'yellow',
+  }, //please do not edit this or you will fuck up the whole grid system of the app
+  gridboxbtn: {
+    flex: 2,
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    width: '90%',
+    justifyContent: 'space-around',
+    // backgroundColor: 'yellow',
+  }, //please do not edit this or you will fuck up the whole grid system of the app
   logoutbtn: {
     alignSelf: 'flex-end',
     color: '#ffffff',
@@ -142,38 +180,34 @@ const styles = StyleSheet.create({
     padding: '4%',
     marginLeft: '5%',
   },
-
   btncontainers: {
-    // flex: 0.3,
+    flex: 1,
     flexDirection: 'row',
-    width: '90%',
-    height: '20%',
+    width: '100%',
+    height: '100%',
     backgroundColor: '#ffffff',
-    marginLeft: '15%',
-    marginRight: '15%',
-    marginBottom: '5%',
-    borderRadius: 15,
-    elevation: 15,
+    borderWidth: 5,
+    borderColor: 'transparent',
+    borderRadius: 25,
+    // borderColor: "#eb3b5a",
+    // marginLeft: '15%',
+    // marginRight: '15%',
+    // marginBottom: '5%',
+    // borderRadius: 15,
+    // elevation: 15,
   },
-  sidelabel: {
-    flex: 0.1,
-    backgroundColor: '#55E6C1',
-    borderBottomLeftRadius: 15,
-    borderTopLeftRadius: 15,
-  },
-
   buttonoption: {
-    flex: 0.9,
+    flex: 1,
+    flexDirection: 'row',
     padding: '10%',
-    alignItems: 'stretch',
+    justifyContent: 'center',
     // margin: "5%",
     // backgroundColor: "red"
   },
   optionstext: {
-    fontSize: 28,
+    fontSize: 20,
     color: '#000000',
-    // backgroundColor: "red",
-    fontFamily: 'Nunito-Bold',
+    fontFamily: 'Nunito-SemiBold',
   },
 
   icons: {

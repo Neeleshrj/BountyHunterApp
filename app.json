@@ -1,4 +1,5 @@
 {
   "name": "BountyHunter",
-  "displayName": "BountyHunter"
+  "displayName": "BountyHunter",
+  "orientation": "potrait"
 }
