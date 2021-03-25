@@ -9,13 +9,13 @@ const Dashboard = () => {
       <View style={styles.innercontainer}>
         <LinearGradient
           style={styles.innercontainer}
-          colors={['#85FFBD', '#FFFB7D']}
+          colors={['#fe5f75', '#fc9842']}
           start={{x: 0, y: 0}}
           end={{x: 1, y: 1}}>
           <View style={{flexDirection: 'row', padding: '2%'}}>
             <TouchableOpacity>
               <Icon
-                name="options-outline"
+                name="menu-outline"
                 style={[
                   styles.logoutbtn,
                   {alignSelf: 'flex-start', marginRight: '50%'},
@@ -34,54 +34,70 @@ const Dashboard = () => {
 
           <View style={styles.card}>
             <View style={styles.btncontainers}>
-              <TouchableOpacity>
-                <Icon name="cube-outline" size={50} style={styles.icons}>
-                  <Text
-                    onPress={() => Alert.alert('Button Pressed')}
-                    style={styles.optionstext}>
-                    Hunt Task
-                  </Text>
-                </Icon>
-              </TouchableOpacity>
+              <View style={styles.sidelabel}></View>
+              <View style={styles.buttonoption}>
+                <TouchableOpacity>
+                  <Icon name="checkmark-circle-outline" size={50} style={styles.icons}>
+                    <Text
+                      onPress={() => Alert.alert('Button Pressed')}
+                      style={styles.optionstext}
+                      textBreakStrategy={'simple'}>
+                      Hunt Task
+                    </Text>
+                  </Icon>
+                </TouchableOpacity>
+              </View>
             </View>
 
-            <View style={[styles.btncontainers, {backgroundColor: '#34e7e4'}]}>
-              <TouchableOpacity>
-                <Icon
-                  name="checkmark-circle-outline"
-                  size={50}
-                  style={styles.icons}>
-                  <Text
-                    onPress={() => Alert.alert('Button Pressed')}
-                    style={styles.optionstext}>
-                    Post Task
-                  </Text>
-                </Icon>
-              </TouchableOpacity>
+            <View style={styles.btncontainers}>
+              <View
+                style={[styles.sidelabel, {backgroundColor: '#fed330'}]}></View>
+              <View style={styles.buttonoption}>
+                <TouchableOpacity>
+                  <Icon
+                    name="hammer-outline"
+                    size={50}
+                    style={styles.icons}>
+                    <Text
+                      onPress={() => Alert.alert('Button Pressed')}
+                      style={styles.optionstext}>
+                      Post Task
+                    </Text>
+                  </Icon>
+                </TouchableOpacity>
+              </View>
             </View>
 
-            <View style={[styles.btncontainers, {backgroundColor: '#ff793f'}]}>
-              <TouchableOpacity>
-                <Icon name="eye-outline" size={50} style={styles.icons}>
-                  <Text
-                    onPress={() => Alert.alert('Button Pressed')}
-                    style={styles.optionstext}>
-                    {'\t\t'}History
-                  </Text>
-                </Icon>
-              </TouchableOpacity>
+            <View style={styles.btncontainers}>
+              <View
+                style={[styles.sidelabel, {backgroundColor: '#334DE0'}]}></View>
+              <View style={styles.buttonoption}>
+                <TouchableOpacity>
+                  <Icon name="time-outline" size={50} style={styles.icons}>
+                    <Text
+                      onPress={() => Alert.alert('Button Pressed')}
+                      style={styles.optionstext}>
+                      History
+                    </Text>
+                  </Icon>
+                </TouchableOpacity>
+              </View>
             </View>
 
-            <View style={[styles.btncontainers, {backgroundColor: '#33d9b2'}]}>
-              <TouchableOpacity>
-                <Icon name="chatbox-outline" size={50} style={styles.icons}>
-                  <Text
-                    onPress={() => Alert.alert('Button Pressed')}
-                    style={styles.optionstext}>
-                    {'\t\t'}Chat
-                  </Text>
-                </Icon>
-              </TouchableOpacity>
+            <View style={styles.btncontainers}>
+              <View
+                style={[styles.sidelabel, {backgroundColor: '#D6A2E8'}]}></View>
+              <View style={styles.buttonoption}>
+                <TouchableOpacity>
+                  <Icon name="chatbubbles-outline" size={50} style={styles.icons}>
+                    <Text
+                      onPress={() => Alert.alert('Button Pressed')}
+                      style={styles.optionstext}>
+                      Chat
+                    </Text>
+                  </Icon>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
         </LinearGradient>
@@ -95,7 +111,6 @@ export default Dashboard;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    fontFamily: 'sans-serif-condensed',
   },
   innercontainer: {
     flex: 1,
@@ -105,53 +120,63 @@ const styles = StyleSheet.create({
   card: {
     flex: 1,
     position: 'absolute',
-    backgroundColor: '#ffffff',
+    backgroundColor: 'transparent',
     height: '80%',
-    width: '90%',
+    width: '100%',
     flexDirection: 'column',
-    borderRadius: 25,
-    elevation: 10,
+    // borderRadius: 25,
+    // elevation: 10,
     marginTop: '30%',
     marginBottom: '10%',
     borderColor: 'transparent',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
+    zIndex: 2,
   },
   logoutbtn: {
     alignSelf: 'flex-end',
-    color: 'black',
-    fontSize: 45,
+    color: '#ffffff',
+    fontSize: 35,
     fontWeight: 'bold',
     padding: '4%',
     marginLeft: '5%',
-    // marginTop: '5%',
-    // marginBottom: '5%',
-    // marginRight: '5%',
   },
 
   btncontainers: {
+    // flex: 0.3,
+    flexDirection: 'row',
     width: '90%',
-    padding: '8%',
-    alignContent: 'center',
-    textAlign: 'center',
-    backgroundColor: '#ff5e57',
+    height: '20%',
+    backgroundColor: '#ffffff',
     marginLeft: '15%',
     marginRight: '15%',
     marginBottom: '5%',
     borderRadius: 15,
-    justifyContent: 'center',
+    elevation: 15,
+  },
+  sidelabel: {
+    flex: 0.1,
+    backgroundColor: '#55E6C1',
+    borderBottomLeftRadius: 15,
+    borderTopLeftRadius: 15,
   },
 
+  buttonoption: {
+    flex: 0.9,
+    padding: '10%',
+    alignItems: 'stretch',
+    // margin: "5%",
+    // backgroundColor: "red"
+  },
   optionstext: {
-    alignSelf: 'center',
-    textAlign: 'center',
-    fontSize: 30,
-    color: '#ffffff',
-    padding: '5%',
+    fontSize: 28,
+    color: '#000000',
+    // backgroundColor: "red",
+    fontFamily: 'Nunito-Bold',
   },
 
   icons: {
-    color: '#ffffff',
+    color: '#eb3b5a',
   },
 });
