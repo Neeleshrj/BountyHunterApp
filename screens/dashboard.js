@@ -34,25 +34,26 @@ const Dashboard = () => {
 
           <View style={styles.card}>
             <View style={[styles.gridbox, {flex: 3}]}>
-              <View>
-                
-              </View>
+              <View></View>
             </View>
 
             <View style={[styles.gridboxbtn]}>
               <View style={styles.btncontainers}>
                 <View style={styles.buttonoption}>
-                  <TouchableOpacity>
-                    <Icon
-                      name="checkmark-circle-outline"
-                      size={50}
-                      style={styles.icons}></Icon>
+                  <TouchableOpacity
+                    onPress={() => Alert.alert('Button Pressed')}>
+                    <View
+                      style={{justiftyContent: 'center', alignItems: 'center'}}>
+                      <Icon
+                        name="checkmark-circle-outline"
+                        size={50}
+                        style={styles.icons}></Icon>
+                    </View>
 
                     <Text
-                      onPress={() => Alert.alert('Button Pressed')}
                       style={styles.optionstext}
                       textBreakStrategy={'simple'}>
-                      Hunt{'\n'}Task
+                      Hunt Task
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -60,18 +61,20 @@ const Dashboard = () => {
 
               <View style={styles.btncontainers}>
                 <View style={styles.buttonoption}>
-                  <TouchableOpacity>
-                    <Icon
-                      name="hammer-outline"
-                      size={50}
-                      style={styles.icons}></Icon>
+                  <TouchableOpacity
+                    onPress={() => Alert.alert('Button Pressed')}>
+                    <View
+                      style={{justiftyContent: 'center', alignItems: 'center'}}>
+                      <Icon
+                        name="hammer-outline"
+                        size={50}
+                        style={styles.icons}></Icon>
+                    </View>
+
                     <Text
-                      onPress={() => Alert.alert('Button Pressed')}
                       style={styles.optionstext}
-                      textBreakStrategy={'simple'}
-                    >
-                        
-                      Post{'\n'}Task
+                      textBreakStrategy={'simple'}>
+                      Post Task
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -81,16 +84,19 @@ const Dashboard = () => {
             <View style={styles.gridboxbtn}>
               <View style={styles.btncontainers}>
                 <View style={styles.buttonoption}>
-                  <TouchableOpacity>
-                    <Icon
-                      name="time-outline"
-                      size={50}
-                      style={styles.icons}></Icon>
+                  <TouchableOpacity
+                    onPress={() => Alert.alert('Button Pressed')}>
+                    <View
+                      style={{justiftyContent: 'center', alignItems: 'center'}}>
+                      <Icon
+                        name="time-outline"
+                        size={50}
+                        style={styles.icons}></Icon>
+                    </View>
+
                     <Text
-                      onPress={() => Alert.alert('Button Pressed')}
                       style={styles.optionstext}
-                      textBreakStrategy={'simple'}
-                    >
+                      textBreakStrategy={'simple'}>
                       History
                     </Text>
                   </TouchableOpacity>
@@ -99,16 +105,19 @@ const Dashboard = () => {
 
               <View style={styles.btncontainers}>
                 <View style={styles.buttonoption}>
-                  <TouchableOpacity>
-                    <Icon
-                      name="chatbubbles-outline"
-                      size={50}
-                      style={styles.icons}></Icon>
+                  <TouchableOpacity
+                    onPress={() => Alert.alert('Button Pressed')}>
+                    <View
+                      style={{justiftyContent: 'center', alignItems: 'center'}}>
+                      <Icon
+                        name="chatbubbles-outline"
+                        size={50}
+                        style={styles.icons}></Icon>
+                    </View>
+
                     <Text
-                      onPress={() => Alert.alert('Button Pressed')}
                       style={styles.optionstext}
-                      textBreakStrategy={'simple'}
-                    >
+                      textBreakStrategy={'simple'}>
                       Chat
                     </Text>
                   </TouchableOpacity>
@@ -199,9 +208,10 @@ const styles = StyleSheet.create({
   buttonoption: {
     flex: 1,
     flexDirection: 'row',
-    padding: '10%',
-    justifyContent: 'center',
-    // margin: "5%",
+    padding: '5%',
+    justifyContent: 'space-evenly',
+    marginTop: '10%',
+    // margin: "30%",
     // backgroundColor: "red"
   },
   optionstext: {
