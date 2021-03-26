@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
   Alert,
-  Button,
   Keyboard,
   KeyboardAvoidingView,
   Platform,
@@ -14,6 +13,7 @@ import {
   View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const SignIn = () => {
   return (
@@ -32,22 +32,79 @@ const SignIn = () => {
               <TextInput placeholder="Email" style={styles.input} />
               <TextInput placeholder="Password" style={styles.input} />
               <TouchableOpacity>
-                <Text style={{marginBottom: 5,fontSize: 16}} onPress={()=>Alert.alert('Forget password page')}>Forgot Your Password?</Text>
-              </TouchableOpacity>
-              
-              <View style={styles.btnContainer}>
                 <Text
-                  style={{fontSize: 20, textAlign: 'center'}}
-                  onPress={() => Alert.alert('Sign In')}>
-                  Sign In
+                  style={{marginBottom: 5, fontSize: 16}}
+                  onPress={() => Alert.alert('Forget password page')}>
+                  Forgot Your Password?
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <View style={styles.btnContainer}>
+                  <Text
+                    style={{fontSize: 20, textAlign: 'center'}}
+                    onPress={() => Alert.alert('Sign In')}>
+                    Sign In
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              <View
+                style={[
+                  styles.btnContainer,
+                  {
+                    backgroundColor: 'transparent',
+                    borderColor: 'transparent',
+                    elevation: 0,
+                  },
+                ]}>
+                <Text style={{fontSize: 15, textAlign: 'center'}}>
+                  Or Sign In using
                 </Text>
               </View>
+              <TouchableOpacity>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-evenly',
+                    padding: 5,
+                  }}>
+                  <View
+                    style={[
+                      styles.btnContainer,
+                      {width: '40%', backgroundColor: '#ffffff'},
+                    ]}>
+                    <View
+                      style={{justiftyContent: 'center', alignItems: 'center'}}>
+                      <Icon
+                        name="logo-google"
+                        size={20}
+                        onPress={() =>
+                          Alert.alert('Login using Google')
+                        }></Icon>
+                    </View>
+                  </View>
+                  <View
+                    style={[
+                      styles.btnContainer,
+                      {width: '40%', backgroundColor: '#ffffff'},
+                    ]}>
+                    <View
+                      style={{justiftyContent: 'center', alignItems: 'center'}}>
+                      <Icon
+                        name="logo-facebook"
+                        style={styles.icon}
+                        size={20}
+                        onPress={() =>
+                          Alert.alert('Login using Google')
+                        }></Icon>
+                    </View>
+                  </View>
+                </View>
+              </TouchableOpacity>
               <View style={{flex: 1}} />
             </View>
           </TouchableWithoutFeedback>
         </SafeAreaView>
       </KeyboardAvoidingView>
-      
     </LinearGradient>
   );
 };
