@@ -15,7 +15,7 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
   return (
     <LinearGradient
       style={{flex: 1}}
@@ -29,7 +29,7 @@ const SignIn = () => {
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.inner}>
               <Text style={styles.header}>Welcome{'\n'}Back!</Text>
-              <TextInput placeholder="Email" style={styles.input} />
+              <TextInput placeholder="Email" style={styles.input} /> 
               <TextInput placeholder="Password" style={styles.input} />
               <TouchableOpacity>
                 <Text
@@ -98,6 +98,30 @@ const SignIn = () => {
                         }></Icon>
                     </View>
                   </View>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <View
+                  style={[
+                    styles.btnContainer,
+                    {
+                      backgroundColor: 'transparent',
+                      borderColor: 'transparent',
+                      elevation: 0,
+                    },
+                  ]}>
+                  <Text 
+                    style={{fontSize: 15, textAlign: 'center',color: "#1e272e"}}    
+                  >
+                    
+                    Not Registered? 
+                      <Text 
+                        style={{color: "#ffffff"}}
+                        onPress={()=>navigation.navigate('SignUp')}
+                      >
+                        Click Here
+                      </Text>
+                  </Text>
                 </View>
               </TouchableOpacity>
               <View style={{flex: 1}} />
