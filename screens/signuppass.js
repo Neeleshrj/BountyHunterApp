@@ -28,13 +28,17 @@ const SignIn = ({navigation}) => {
         <SafeAreaView style={styles.container}>
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.inner}>
-              <Text style={styles.header}>Sign Up{'\n'}Here!</Text>
-              {/* <TextInput placeholder="Full Name" style={styles.input} />
-              <TextInput placeholder="Username" style={styles.input} />
-              <TextInput placeholder="Email" style={styles.input} />
-              <TextInput placeholder="PhoneNumber" style={styles.input} /> */}
-              <TextInput placeholder="Password" style={styles.input} />
-              <TextInput placeholder="Confirm Password" style={styles.input} />
+              <Text style={styles.header}>Almost{'\n'}There!</Text>
+              <TextInput 
+                placeholder="Password" 
+                style={styles.input} 
+                secureTextEntry={true}
+              />
+              <TextInput 
+                placeholder="Confirm Password" 
+                style={styles.input} 
+                secureTextEntry={true}
+              />
               <TouchableOpacity>
                 <View style={styles.btnContainer}>
                   <Text
@@ -44,22 +48,6 @@ const SignIn = ({navigation}) => {
                   </Text>
                 </View>
               </TouchableOpacity>
-              {/* <View
-                style={[
-                  styles.btnContainer,
-                  {
-                    backgroundColor: 'transparent',
-                    borderColor: 'transparent',
-                    elevation: 0,
-                  },
-                ]}>
-                <Text 
-                  style={{fontSize: 15, textAlign: 'center'}}
-                  onPress={() => navigation.navigate('signin')}
-                >
-                  Already Registered?Sign In
-                </Text>
-              </View> */}
               <View style={{flex: 1}} />
             </View>
           </TouchableWithoutFeedback>
@@ -85,6 +73,7 @@ const styles = StyleSheet.create({
     fontSize: 64,
     marginBottom: 48,
     color: '#ffffff',
+    fontFamily: 'Nunito-SemiBold',
   },
   input: {
     fontSize: 22,
@@ -94,6 +83,7 @@ const styles = StyleSheet.create({
     padding: '5%',
     marginBottom: 20,
     elevation: 8,
+    fontFamily: 'Nunito-SemiBold',
     // flex: 1,
     // height: "10%",
     // borderColor: "#000000",
@@ -110,5 +100,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ffffff',
     elevation: 5,
+    fontFamily: 'Nunito-SemiBold',
   },
 });

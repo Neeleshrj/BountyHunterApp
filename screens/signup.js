@@ -13,7 +13,7 @@ import {
   View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import Icon from 'react-native-vector-icons/Ionicons';
+
 
 const SignIn = ({navigation}) => {
   return (
@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
     fontSize: 64,
     marginBottom: 48,
     color: '#ffffff',
+    fontFamily: 'Nunito-SemiBold',
   },
   input: {
     fontSize: 22,
@@ -98,6 +99,7 @@ const styles = StyleSheet.create({
     padding: '5%',
     marginBottom: 20,
     elevation: 8,
+    fontFamily: 'Nunito-SemiBold',
     // flex: 1,
     // height: "10%",
     // borderColor: "#000000",
@@ -114,5 +116,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ffffff',
     elevation: 5,
+    fontFamily: 'Nunito-SemiBold',
   },
 });

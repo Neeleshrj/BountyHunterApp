@@ -30,7 +30,11 @@ const SignIn = ({navigation}) => {
             <View style={styles.inner}>
               <Text style={styles.header}>Welcome{'\n'}Back!</Text>
               <TextInput placeholder="Email" style={styles.input} /> 
-              <TextInput placeholder="Password" style={styles.input} />
+              <TextInput 
+                placeholder="Password"
+                style={styles.input} 
+                secureTextEntry={true}
+              />
               <TouchableOpacity>
                 <Text
                   style={{marginBottom: 5, fontSize: 16}}
@@ -149,6 +153,7 @@ const styles = StyleSheet.create({
     fontSize: 64,
     marginBottom: 48,
     color: '#ffffff',
+    fontFamily: 'Nunito-SemiBold',
   },
   input: {
     fontSize: 22,
@@ -158,6 +163,7 @@ const styles = StyleSheet.create({
     padding: '5%',
     marginBottom: 20,
     elevation: 8,
+    fontFamily: 'Nunito-SemiBold',
     // flex: 1,
     // height: "10%",
     // borderColor: "#000000",
@@ -174,5 +180,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ffffff',
     elevation: 5,
+    fontFamily: 'Nunito-SemiBold',
   },
 });
