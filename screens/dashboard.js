@@ -43,7 +43,7 @@ const Dashboard = () => {
                   <TouchableOpacity
                     onPress={() => Alert.alert('Button Pressed')}>
                     <View
-                      style={{justiftyContent: 'center', alignItems: 'center'}}>
+                      style={{justifyContent: 'center', alignItems: 'center'}}>
                       <Icon
                         name="checkmark-circle-outline"
                         size={50}
@@ -64,7 +64,7 @@ const Dashboard = () => {
                   <TouchableOpacity
                     onPress={() => Alert.alert('Button Pressed')}>
                     <View
-                      style={{justiftyContent: 'center', alignItems: 'center'}}>
+                      style={{justifyContent: 'center', alignItems: 'center'}}>
                       <Icon
                         name="hammer-outline"
                         size={50}
@@ -87,7 +87,7 @@ const Dashboard = () => {
                   <TouchableOpacity
                     onPress={() => Alert.alert('Button Pressed')}>
                     <View
-                      style={{justiftyContent: 'center', alignItems: 'center'}}>
+                      style={{justifyContent: 'center', alignItems: 'center'}}>
                       <Icon
                         name="time-outline"
                         size={50}
@@ -108,7 +108,7 @@ const Dashboard = () => {
                   <TouchableOpacity
                     onPress={() => Alert.alert('Button Pressed')}>
                     <View
-                      style={{justiftyContent: 'center', alignItems: 'center'}}>
+                      style={{justifyContent: 'center', alignItems: 'center'}}>
                       <Icon
                         name="chatbubbles-outline"
                         size={50}

@@ -17,7 +17,9 @@ const SplashScreen1 = ({navigation}) => {
               <Icon
                 name="chevron-back-outline"
                 size={35}
-                style={styles.icons}></Icon>
+                style={styles.icons}
+                onPress={() => navigation.navigate('Splash0')}
+              ></Icon>
             </TouchableOpacity>
           </View>
           <View style={styles.right}>

@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   topbar: {
     flexDirection: 'row',
-    flex: 0.1,
+    flex: 0.2,
     // backgroundColor: 'green',
     padding: '3%',
     justifyContent: 'flex-end',
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: '40%',
+    height: '30%',
     zIndex: 3,
     padding: '10%',
     marginBottom: '5%',
